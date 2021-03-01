@@ -1,3 +1,5 @@
 function factorial(n) {
-  // ваш код...
+  let step = 1;
+  for (let i = 2; i <= n; i++) step = step * i;
+  return step;
 }
