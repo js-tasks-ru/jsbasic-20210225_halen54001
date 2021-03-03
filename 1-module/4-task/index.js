@@ -1,9 +1,9 @@
 function checkSpam(str) {
   if (
-    str == "1xbet" ||
-    str == "xxx" ||
-    str == "free xxxxx" ||
-    str == "1XbeT now"
+    str.match(/1xbet/i) ||
+    str.match(/xxx/i) ||
+    str.match(/free xxxxx/i) ||
+    str.match(/1XbeT now/i)
   ) {
     return true;
   } else return false;
