@@ -1,8 +1,7 @@
 function sumSalary(salaries) {
   let sum = 0;
-  // не могу разобраться как добавить проверку salaries[key] == "number" на `NaN`, `Infinity`, `-Infinity`
-  for (let key in salaries) {
-    if (typeof salaries[key] == "number") {
+  for (const key in salaries) {
+    if (typeof salaries[key] == "number" && isFinite(salaries[key])) {
       sum += salaries[key];
     }
   }
