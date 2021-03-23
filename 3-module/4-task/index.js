@@ -1,9 +1,5 @@
 function showSalary(users, age) {
-  let usersAgefilter = users.filter(function (person) {
-    if (person.age <= age) {
-      return person;
-    }
-  });
+  let usersAgefilter = users.filter((person) => person.age <= age);
   let mappedUsers = usersAgefilter.map(
     (person) => `${person.name}, ${person.balance}`
   );
