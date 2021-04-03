@@ -8,7 +8,7 @@ function highlight(table) {
     } else if (trDataAvailable == "false") {
       elemTr[i].classList.add("unavailable");
     } else if (!trDataAvailable) {
-      elemTr[i].setAttribute("hidden", "hidden");
+      elemTr[i].hidden = true;
     }
   }
 
@@ -24,7 +24,7 @@ function highlight(table) {
   for (var i = 1; i < elemTr.length; i++) {
     let tdAge = table.rows[i].cells[1].innerHTML;
     if (tdAge < 18) {
-      elemTr[i].setAttribute("style", "text-decoration: line-through");
+      elemTr[i].style.textDecoration = "line-through";
     }
   }
 }
